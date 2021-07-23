@@ -1,0 +1,89 @@
+<form [formGroup]='myForm' (ngSubmit)='submit()'>
+    <div class="form-group"
+    formGroupName='userData'>
+    <label for="email">Email</label>
+    <input
+    id='email' 
+    type="text"
+    class="form-control"
+    formControlName='email'>
+    <span class="help-block" 
+    *ngIf="myForm.get('userData.email').invalid && myForm.get('userData.email').touched ">
+    Please enter Email address
+</span>
+    <label for="id">ID</label>
+    <input 
+        type="text" 
+        formControlName='ID'
+        class="form-control"
+     >
+     <span class="help-block" *ngIf="!myForm.get('userData.ID').valid &&
+     myForm.get('userData.ID').touched">enter ID</span>
+
+     
+      
+      <span class="help-block" 
+      *ngIf="myForm.getError('exsit', 'userData.ID') ">
+      ID already exsit</span>
+     
+    
+    
+    <label for="username">User name</label>
+    <input 
+    type="text"
+    class="form-control"
+    formControlName='username'>
+    <span class="help-block" 
+    *ngIf="myForm.get('userData.username').invalid && myForm.get('userData.username').touched ">
+    Please enter the user name
+</span>
+  
+    <label for="password">password</label>
+    <input 
+    type="password"
+    class="form-control"
+    formControlName='password'>
+    <span class="help-block" 
+    *ngIf="myForm.get('userData.password').invalid &&
+     myForm.get('userData.password').touched ">
+    Please enter a password
+</span>
+  
+    <label for="con-password">Confriom password</label>
+    <input 
+    type="password"
+    class="form-control"
+    formControlName='con-password'>
+    <span class="help-block" 
+    *ngIf="myForm.get('userData.con-password').invalid && 
+    myForm.get('userData.con-password').touched ">
+    Please confriom  password
+</span>
+
+<span class="help-block" 
+*ngIf="myForm.get('userData.password').value!== 
+myForm.get('userData.con-password').value &&  myForm.get('userData.con-password').touched">
+password not matching
+
+</span>
+        
+        
+    </div>
+    <div class="form-group">
+        <label class="radio" *ngFor='let gender of genders' >
+            <input 
+            type="radio"
+            formControlName='gender'
+            [value]="gender"
+            >
+            {{gender}}
+        </label>
+    </div>
+    <button 
+    class="btn btn-primary"
+    [disabled]="!(myForm.valid && myForm.get('userData.password').
+    value== myForm.get('userData.con-password').value ) ">
+        Submit
+    </button>
+</form>
+

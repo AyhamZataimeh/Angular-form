@@ -1,0 +1,29 @@
+.container {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    
+}
+input {
+    width: 250px;
+    margin:5px;
+}
+label {
+    /* padding: 5px; */
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+nav a {
+    color: white;
+}
+
+button {
+    margin-left: 50%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-top: -60px;
+
+}

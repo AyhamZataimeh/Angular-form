@@ -1,0 +1,16 @@
+<input type="text"
+ [(ngModel)]='userID' 
+ placeholder="search by ID"
+ class="form-control">
+<div *ngFor="let user of users|mypip:userID:'ID'">
+    <ul class="list-group">
+        <li class="list-group-item active">ID: {{user.ID}}</li>
+        <li class="list-group-item " >name: {{user.name}}</li>
+        <li class="list-group-item " >email: {{user.email}}</li>
+        <li class="list-group-item " >gender: {{user.gender}}</li>
+        <li class="list-group-item " >Registration date: {{user.date|date:'short'}}</li>
+
+
+    </ul>
+</div>
+

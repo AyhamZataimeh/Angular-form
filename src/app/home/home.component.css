@@ -1,0 +1,25 @@
+input {
+    width: 300px;
+}
+label {
+    margin-top: 5%;
+    color: white;
+}
+form {
+    width: 50%;
+    background-image: linear-gradient(#6942f5,#7f00d4);
+    margin: 5% ;
+    padding: 5% 10%;
+    border-radius: 30px;
+
+  
+
+}
+form button {
+    margin: 10% 35%;
+    font-size: 20px;
+    outline:none;   
+}
+span {
+    color: white;
+}

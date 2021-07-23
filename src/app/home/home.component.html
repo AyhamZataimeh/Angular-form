@@ -1,0 +1,26 @@
+<form [formGroup]='myForm' (ngSubmit)='submit()'>
+  <label for="email">Email</label>
+  <input 
+  type="text" name="" class="form-control" id="email"
+  formControlName='email'>
+  <span
+  class="help-block" 
+   *ngIf="!myForm.get('email').valid && myForm.get('email').touched">invalid email</span>
+   <span class="help-block"
+    *ngIf="myForm.get('email').pending">Checking Email</span>
+
+  <label for="password">Password</label>
+  <input 
+    type="password"
+    class="form-control"
+    formControlName='password'
+   >
+   <span
+   class="help-block" 
+    *ngIf="!myForm.get('password').valid && myForm.get('password').touched">Enter the password</span>
+   <button 
+    type="submit"
+    class="btn btn-success"
+    [disabled]='!myForm.valid'>Submit</button>
+
+</form>
