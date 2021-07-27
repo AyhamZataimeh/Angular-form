@@ -15,8 +15,8 @@ export class SignInComponent implements OnInit {
   constructor(
     private router:Router,
     private route:ActivatedRoute,
-    private service:myService
-  ) { }
+    private service:myService)
+     { }
 
   ngOnInit(): void {
     this.myForm=new FormGroup({
@@ -35,18 +35,13 @@ export class SignInComponent implements OnInit {
       console.log(status);
       
     })
-    // this.myForm.patchValue({
-    //   'userData':{
-    //     'ID':"013"
-    //   }
-    // })
     
-   
 
     
   }
 
   validID(control:FormControl):{[s:string]:boolean}{
+
     if(this.service.usersID.indexOf(control.value)!==-1){
       return{'exsit':true};
      
@@ -70,7 +65,6 @@ export class SignInComponent implements OnInit {
       date:Date()
     });
     this.service.usersID.push(this.myForm.get('userData.ID').value);
-    console.log(this.myForm.get('userData.ID'));
     
     
 

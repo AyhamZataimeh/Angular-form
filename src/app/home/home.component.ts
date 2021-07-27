@@ -40,8 +40,7 @@ export class HomeComponent implements OnInit {
     return promise
   }
   submit(){
-    this.router.navigate(['/users']);
-    console.log(this.myForm);
+    this.router.navigate(['/loading']);
     
    
 

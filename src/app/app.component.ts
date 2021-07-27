@@ -22,10 +22,7 @@ export class AppComponent implements OnInit {
    
   }
   
-  signup(){
-    this.router.navigate(['/sign-in'],{relativeTo:this.route})
-  }
-
+  
 
 
   }

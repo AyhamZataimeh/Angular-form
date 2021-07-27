@@ -1,0 +1,56 @@
+
+.loading { 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 2%;
+   
+    
+
+
+
+}
+.loading h3 {
+    position: absolute;
+    left: 49%;
+    margin-top: 40px;
+
+}
+
+.loading div {
+    background-color: #337ab7;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: .3;
+    position: absolute;
+
+
+    
+}
+.loading .two {
+    animation-delay:.3s ;
+    left: 52%;
+
+}
+.loading .three {
+    left: 56%;
+
+    animation-delay:.6s ;
+}
+@keyframes load {
+    to {
+        opacity: 1;
+
+        width: 30px;
+        height: 30px;
+        
+    }
+    
+}

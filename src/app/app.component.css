@@ -1,16 +1,15 @@
 .container {
     position: absolute;
-    left: 20%;
+    /* left: 20%; */
     top: 10%;
+    /* overflow: hidden; */
     
 }
 input {
     width: 250px;
     margin:5px;
 }
-label {
-    /* padding: 5px; */
-}
+
 input.ng-invalid.ng-touched {
     border: 1px solid red;
 }

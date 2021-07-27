@@ -6,7 +6,6 @@ import { Injectable,EventEmitter } from "@angular/core";
     providedIn:'root'
 })
 export class myService{
-    value=new EventEmitter<any>();
     usersID=[];  
     users=[];
     

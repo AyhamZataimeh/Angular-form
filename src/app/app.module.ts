@@ -10,6 +10,8 @@ import { myService } from './myservice.service';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UsersComponent } from './users/users.component';
     MypipPipe,
     SignInComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    NotFoundComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

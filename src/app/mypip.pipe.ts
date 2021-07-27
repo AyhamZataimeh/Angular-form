@@ -14,15 +14,7 @@ export class MypipPipe implements PipeTransform {
 
     }
     for(const v of value){
-      // for(let i=0;i<v[prop].length;i++){
-      //   if(v[prop][i]===username[i]){
-      //     users.push(v);
-
-
-      //   }
-      
-        
-      // }
+     
       if(v[ID]===user){
         users.push(v);
         
